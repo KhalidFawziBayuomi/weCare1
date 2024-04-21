@@ -24,7 +24,7 @@ const getAllUserSignIn=catchError(async(req,res)=>{
    
 
    
-res.status(201).json({message:"success",token,user,result})
+res.status(201).json({message:"success",token,user})
 
 })
 
