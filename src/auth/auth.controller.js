@@ -17,13 +17,7 @@ const getAllUserSignIn=catchError(async(req,res)=>{
     let isUser=await userModel.findOne({email:req.body.email})
     if(isUser)return res.status(409).json({message:"already exists"})
     const user=new userModel(req.body)
-    const OTP=otpGenerator.generate(6,{digits:true,alphabets:false,upperCase:false,specialChars:false})
-    const phone=req.body.phone
-    console.log(OTP);
-    const otp =new otpModel({phone:phone,otp:OTP})
-    const salt=await bcrypt.genSalt(10)
-    otp.otp=await bcrypt.hash(otp.otp,salt)
-    const result=await otp.save();
+   
 
     await user.save()
     let token=jwt.sign({email:user.email,name:user.name,id:user._id,role:user.role},'khalid')
