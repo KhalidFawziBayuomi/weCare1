@@ -18,31 +18,6 @@ const userSchema=new Schema({
         type:String,
         require:true
 
-    },
-    role:{
-        type:String,
-        enum:['admin','user'],
-    },
-    isActive:{
-        type:Boolean,
-        default:true
-    },
-    verified:{
-        type:Boolean,
-        default:false
-    },
-    blocked:{
-        type:Boolean,
-        default:false
-    },
-    phone:{
-        type:String,
-        unique:true,
-        required:true,
-    },
-    gender:{
-        type:String,
-        enum:['male','female'],
     }
 },{timestamps:true})
 
