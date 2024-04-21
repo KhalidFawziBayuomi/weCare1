@@ -44,7 +44,7 @@ const signIn=catchError(async(req,res,next)=>{
         let token=jwt.sign({email:user.email,name:user.name,id:user._id,role:user.role},'khalid')
         res.status(201).json({message:"success",token,email,password})
     }else{
-        return res.status(409).json({message:"incorrect email or password"}) 
+        return res.status(409).json({message:"incorrect khalid or password"}) 
     }
    
 })
