@@ -1,7 +1,7 @@
 import  {userModel}  from "../../database/models/user.model.js"
 
 import jwt from "jsonwebtoken"
-import _ from "lodash"
+
 import axios from "axios"
 import bcrypt from 'bcrypt'
 
