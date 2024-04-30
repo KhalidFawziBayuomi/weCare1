@@ -19,7 +19,19 @@ const toolsSchema=new Schema({
     price:{
         type:Number,
         required:true
-    }
+    },
+     color:{
+        type:String,
+        required:true
+    },
+     size:{
+        type:String,
+        required:true
+    },
+    qty:{
+        type:String,
+        required:true
+    },
     
     
 
