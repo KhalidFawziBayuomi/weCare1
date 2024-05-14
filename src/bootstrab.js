@@ -1,8 +1,9 @@
 import authRouter from "./auth/auth.routes.js"
 import userRouter from "./modules/user/user.routes.js"
 import toolsRouter from "./products/product.routs.js"
-
-
+import trendRouter from "./trend/trend.routs.js"
+import womanRouter from "./woman/woman.routs.js"
+import accessoriesRouter from "./accessories/accessories.routs.js"
 
 export function bootstrap(app){
     app.use('/api/v1/users',userRouter)
