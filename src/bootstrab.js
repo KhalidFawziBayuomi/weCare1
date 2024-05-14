@@ -8,5 +8,8 @@ export function bootstrap(app){
     app.use('/api/v1/users',userRouter)
     app.use('/api/v1/auth',authRouter)
     app.use('/api/v1/product',toolsRouter)
+    app.use('/api/v1/woman',womanRouter)
+    app.use('/api/v1/trend',trendRouter)
+    app.use('/api/v1/accessories',accessoriesRouter)
     app.get('/',(req,res)=>res.send('hello world'))
 }
